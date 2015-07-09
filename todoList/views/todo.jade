@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container
+    .row#form-newList
+      .col-md-12
+        p リスト：#{todoTitle}
+      .col-md-12.bordered
+        .row
+          .col-md-12 新しいToDoを作成する
+          form#form-add.form-horizontal
+            .form-group
+              label.col-md-2.control-label(for='todo-content') ToDo名
+              .col-md-10
+                input#todo-content.form-control(type='text', placeholder='ToDo名を入力してください', maxlength='50')
+            .form-group
+              label.col-md-2.control-label(for='todo-date') 期限
+              .col-md-10
+                input#todo-date.form-control(type='date')
+            .form-group
+              .col-md-offset-2.col-md-10
+                button.btn.btn-default(type='submit') ToDoの追加
+      .col-md-12#message-error.message.bg-warning
+      .col-md-12#message-notice.message.bg-info
+    .row#todo-list(style='display:none;')
+
+block scripts
+  script(type='text/javascript').
+    var todoId = '#{todoId}';
+  script(type='text/javascript', src='/javascripts/todo.js')

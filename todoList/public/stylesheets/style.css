@@ -1,0 +1,26 @@
+#header {
+  font-size: 36px;
+  background-color: #F0F0F0;
+}
+
+#search {
+  text-align: right;
+}
+
+#message-error {
+  color: red;
+}
+
+.bordered {
+  margin: 20px;
+  padding: 20px;
+  border: solid 2px #000;
+}
+
+.todo-status {
+  float: right;
+}
+
+#row-search {
+  margin-top: 30px;
+}

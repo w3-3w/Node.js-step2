@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container
+    .row#form-newList
+      .col-md-12 新しいToDoリストを作成する
+      .col-md-12
+        .row
+          form#form-addList
+            .col-md-8
+              .form-group
+                label.sr-only(for='list-title') リスト名
+                input#list-title.form-control(type='text', placeholder='リスト名を入力してください', maxlength='50')
+            .col-md-4
+              button.btn.btn-default(type='submit') リストの作成
+      .col-md-12#message-error.message.bg-warning
+      .col-md-12#message-notice.message.bg-info
+    .row#list-list(style='display:none;')
+
+block scripts
+  script(type='text/javascript', src='/javascripts/index.js')

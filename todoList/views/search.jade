@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container
+    .row#row-search
+      .col-md-12
+        .row
+          form#form-search
+            .col-md-8
+              .form-group
+                label.sr-only(for='search-content') 検索内容
+                input#search-content.form-control(type='search', maxlength='25', required='required')
+            .col-md-4
+              button.btn.btn-default(type='submit') 検索
+      .col-md-12#message-error.message.bg-warning
+      .col-md-12#message-notice.message.bg-info
+    .row#search-result
+
+block scripts
+  script(type='text/javascript', src='/javascripts/search.js')
